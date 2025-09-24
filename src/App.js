@@ -152,9 +152,7 @@ function App() {
     }
   };
 
-  const handleTimeChange = (e) => {
-    setEventStartTime(e.target.value);
-  };
+
 
   return (
     <div className="app">
