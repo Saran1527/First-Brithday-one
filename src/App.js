@@ -5,7 +5,7 @@ function App() {
   const canvasRef = useRef(null);
   const textRefs = useRef([]);
   const weddingDate = useMemo(() => new Date("2025-09-29T17:00:00"), []);
-  const [eventStartTime, setEventStartTime] = useState("17:00"); 
+  const [eventStartTime] = useState("17:00"); 
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -152,12 +152,8 @@ function App() {
     }
   };
 
-  const handleTimeChange = (e) => {
-    setEventStartTime(e.target.value);
-  };
-  useEffect(() => {
-  handleTimeChange();
-}, []);
+ 
+  
 
   return (
     <div className="app">
@@ -294,7 +290,7 @@ function App() {
                   <h3>Priya Dharshini Mini Hall</h3>
                   <p className="venue-address">Chennai, Tamil Nadu, India</p>
                   <p className="event-time-display">
-                    ⏰ Event Time: {eventStartTime} on September 29, 2025
+                    ⏰ Event Time: {eventStartTime} PM on September 29, 2025
                   </p>
                   <button
                     className="direction-btn"
