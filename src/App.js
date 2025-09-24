@@ -5,6 +5,7 @@ function App() {
   const canvasRef = useRef(null);
   const textRefs = useRef([]);
   const weddingDate = useMemo(() => new Date("2025-09-29T17:00:00"), []);
+  const [eventStartTime, setEventStartTime] = useState("17:00"); 
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -151,7 +152,12 @@ function App() {
     }
   };
 
-
+  const handleTimeChange = (e) => {
+    setEventStartTime(e.target.value);
+  };
+  useEffect(() => {
+  handleTimeChange();
+}, []);
 
   return (
     <div className="app">
