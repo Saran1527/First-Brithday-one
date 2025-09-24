@@ -172,7 +172,7 @@ function App() {
                   I'm <strong className="name-highlight">LIYA RACHEL</strong> 💖
                 </p>
                 <p ref={addToRefs} className="description animated-text-left">
-                  Beloved Daughter of <strong>Gowtham Rebekal</strong> & <strong>G. Liya Rachel</strong>
+                  Beloved Daughter of <strong>Gowtham</strong> & <strong>Rebekal</strong>
                 </p>
               </div>
               <div className="photo-display">
@@ -335,9 +335,9 @@ function App() {
                 With all our love,
               </p>
               <div className="names">
-                <span className="name">Gowtham Rebekal</span>
+                <span className="name">Gowtham</span>
                 <span className="ampersand">&</span>
-                <span className="name">G. Liya Rachel</span>
+                <span className="name">Rebekal</span>
               </div>
             </div>
           </div>
