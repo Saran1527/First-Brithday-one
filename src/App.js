@@ -289,8 +289,8 @@ function App() {
                 <div className="venue-content">
                   <h3>Priya Dharshini Mini Hall</h3>
                   <p className="venue-address">
-                    📍 No:17/30,7th Avenue, Ashok Nagar, Chennai -83(Opposite GRT school)<br />
-                    Tamil Nadu, India
+                    📍 No:17/30,7th Avenue, Ashok Nagar, Chennai -83<br />
+                    (Opposite GRT school)
                   </p>
                   <div className="event-time-display">
                     <p>🗓️ <strong>Date:</strong> October 29, 2025</p>
