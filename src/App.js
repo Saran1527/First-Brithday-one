@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const canvasRef = useRef(null);
   const textRefs = useRef([]);
-  const weddingDate = useMemo(() => new Date("2025-09-29T17:00:00"), []);
+  const weddingDate = useMemo(() => new Date("2025-10-29T17:00:00"), []);
   const [eventStartTime] = useState("17:00"); 
 
   useEffect(() => {
@@ -164,7 +164,7 @@ function App() {
         <div className="container">
           <div className="welcome-content">
             <h1 ref={addToRefs} className="main-title animated-text">
-              🎉 Welcome to My 1st Birthday! 🎉
+              🎉 Welcome to Our Daughter’s 1st Birthday! 🎉
             </h1>
             <div className="intro-grid">
               <div className="intro-text">
@@ -172,7 +172,7 @@ function App() {
                   I'm <strong className="name-highlight">LIYA RACHEL</strong> 💖
                 </p>
                 <p ref={addToRefs} className="description animated-text-left">
-                  Beloved Daughter of <strong>Gowtham</strong> & <strong>Rebekal</strong>
+                  Beloved Daughter of <strong>Gowtham </strong> & <strong>Rebekal</strong>
                 </p>
               </div>
               <div className="photo-display">
@@ -275,7 +275,7 @@ function App() {
       </section>
 
       {/* Venue Section - Side by Side Layout */}
-      <section className="venue-section">
+     <section className="venue-section">
         <div className="container">
           <div className="section-header centered">
             <h2 ref={addToRefs} className="section-title animated-text">
@@ -288,10 +288,15 @@ function App() {
                 <div className="venue-icon">🏛️</div>
                 <div className="venue-content">
                   <h3>Priya Dharshini Mini Hall</h3>
-                  <p className="venue-address">Chennai, Tamil Nadu, India</p>
-                  <p className="event-time-display">
-                    ⏰ Event Time: {eventStartTime} PM on September 29, 2025
+                  <p className="venue-address">
+                    📍 No. 12, Gandhi Nagar Main Road,<br />
+                    Adyar, Chennai - 600020,<br />
+                    Tamil Nadu, India
                   </p>
+                  <div className="event-time-display">
+                    <p>🗓️ <strong>Date:</strong> October 29, 2025</p>
+                    <p>⏰ <strong>Time:</strong> 05:00 PM</p>
+                  </div>
                   <button
                     className="direction-btn"
                     onClick={() =>
