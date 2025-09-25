@@ -107,6 +107,7 @@ section {
   margin-bottom: var(--spacing-sm);
   color: var(--primary-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .section-subtitle {
@@ -329,7 +330,16 @@ section {
 
 .gallery-container {
   width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
+
+/* Custom scrollbar for gallery */
+.gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
 
 .gallery-grid {
   display: grid;
@@ -656,9 +666,7 @@ section {
     font-size: 2.5rem;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+  
 
   .names {
     flex-direction: column;
@@ -675,6 +683,10 @@ section {
 
   .main-title {
     font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 
   .subtitle {
@@ -713,3 +725,5 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
+
+
