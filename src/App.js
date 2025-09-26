@@ -292,9 +292,9 @@ function App() {
                 <div className="venue-content">
                   <h3>Priya Dharshini Mini Hall</h3>
                   <p className="venue-address">
-                    📍 No. 12, Gandhi Nagar Main Road,<br />
-                    Adyar, Chennai - 600020,<br />
-                    Tamil Nadu, India
+                    📍 No:17,7/30th Avenue, Ashok Nagar, Chennai-83
+                    <br />
+                    (Opposite GRT School)
                   </p>
                   <div className="event-time-display">
                     <p>🗓️ <strong>Date:</strong> October 29, 2025</p>
