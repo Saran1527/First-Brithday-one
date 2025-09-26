@@ -178,7 +178,7 @@ function App() {
               <div className="photo-display">
                 <div className="photo-wrapper">
                   <img
-                    src="images/WhatsApp Image 2025-09-22 at 13.02.32_93b51003.jpg"
+                    src="images/HomePage.jpg"
                     alt="Family"
                     className="family-photo"
                   />
@@ -241,18 +241,21 @@ function App() {
           <div className="gallery-container">
             <div className="gallery-grid">
               {[
-                "WhatsApp Image 2025-09-23 at 16.30.03_b26879a7.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.28_ac49efe3.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.28_c69e374c.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.29_0c1f4828.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.29_8a42a2ee.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.30_693ff621.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.30_747ae9f6.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.31_1fd26f5c.jpg",
-                "WhatsApp Image 2025-09-22 at 13.02.31_fc018450.jpg",
-                "WhatsApp Image 2025-09-23 at 16.30.04_c498f190.jpg",
+                "Image1.jpg",
+                "Image2.jpg",
+                "Image3.jpg",
+                "Image4.jpg",
+                "Image5.jpg",
+                "Image6.jpg",
+                "Image7.jpg",
+                "Image8.jpg",
+                "Image9.jpg",
+                "Image10.jpg",
+                "Image11.jpg",
+                "Image12.jpg",
+                "Image13.jpg",
               ].map((file, index) => (
-                <div 
+                <div
                   key={index} 
                   className="gallery-item"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -289,8 +292,9 @@ function App() {
                 <div className="venue-content">
                   <h3>Priya Dharshini Mini Hall</h3>
                   <p className="venue-address">
-                    📍 No:17/30,7th Avenue, Ashok Nagar, Chennai -83<br />
-                    (Opposite GRT school)
+                    📍 No. 12, Gandhi Nagar Main Road,<br />
+                    Adyar, Chennai - 600020,<br />
+                    Tamil Nadu, India
                   </p>
                   <div className="event-time-display">
                     <p>🗓️ <strong>Date:</strong> October 29, 2025</p>
