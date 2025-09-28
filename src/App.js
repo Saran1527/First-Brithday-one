@@ -258,12 +258,12 @@ function App() {
                 <div
                   key={index} 
                   className="gallery-item"
-                  style={{ animationDelay: ${index * 0.1}s }}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="gallery-card">
                     <img
-                      src={/images/${file}}
-                      alt={Memory ${index + 1}}
+                      src={`/images/${file}`}
+                      alt={`Memory ${index + 1}`}
                       className="gallery-image"
                     />
                     <div className="card-overlay">
