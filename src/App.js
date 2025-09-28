@@ -4,9 +4,56 @@ import "./App.css";
 function App() {
   const canvasRef = useRef(null);
   const textRefs = useRef([]);
+  const audioRef = useRef(null);
   const weddingDate = useMemo(() => new Date("2025-10-29T17:00:00"), []);
-  const [eventStartTime] = useState("17:00"); 
+  const [eventStartTime] = useState("17:00");
 
+  // Audio initialization and autoplay
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    // Set audio properties for automatic playback
+    audio.loop = true;
+    audio.volume = 1; // Set volume to 50%
+    
+    // Function to handle audio play
+    const playAudio = () => {
+      const playPromise = audio.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log("Audio is playing automatically");
+          })
+          .catch(error => {
+            console.log("Autoplay was prevented:", error);
+            // If autoplay is blocked, try again on user interaction
+            const enableAudio = () => {
+              audio.play();
+              document.removeEventListener('click', enableAudio);
+              document.removeEventListener('touchstart', enableAudio);
+            };
+            
+            document.addEventListener('click', enableAudio);
+            document.addEventListener('touchstart', enableAudio);
+          });
+      }
+    };
+
+    // Try to play audio when component mounts
+    playAudio();
+
+    // Cleanup function
+    return () => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    };
+  }, []);
+
+  // Auto-scroll effect
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const scrollToSection = (index) => {
@@ -152,11 +199,16 @@ function App() {
     }
   };
 
- 
-  
-
   return (
     <div className="app">
+      {/* Hidden Audio Element for Automatic Playback */}
+      <audio
+        ref={audioRef}
+        src="images/Audio.mp3"
+        preload="auto"
+        loop
+      />
+      
       <canvas ref={canvasRef} className="background-canvas"></canvas>
 
       {/* Welcome Section - Centered Layout */}
@@ -164,7 +216,7 @@ function App() {
         <div className="container">
           <div className="welcome-content">
             <h1 ref={addToRefs} className="main-title animated-text">
-              🎉 Welcome to Our Daughter’s 1st Birthday! 🎉
+              🎉 Welcome to Our Daughter's 1st Birthday! 🎉
             </h1>
             <div className="intro-grid">
               <div className="intro-text">
@@ -278,7 +330,7 @@ function App() {
       </section>
 
       {/* Venue Section - Side by Side Layout */}
-     <section className="venue-section">
+      <section className="venue-section">
         <div className="container">
           <div className="section-header centered">
             <h2 ref={addToRefs} className="section-title animated-text">
